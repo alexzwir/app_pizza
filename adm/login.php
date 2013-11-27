@@ -14,9 +14,9 @@ if(isset($_POST['senha'])){
 
 #Select do usuário no banco
 $sql = "SELECT * 
-               FROM app_adm 
-               WHERE adm_login = '$login' 
-               AND adm_senha = '$senha' ";
+               FROM app_admin
+               WHERE id_login = '$login' 
+               AND id_senha = '$senha' ";
 #Executa a query
 $query = mysql_query($sql);
 

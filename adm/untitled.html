@@ -1,0 +1,13 @@
+<?php 
+include ('config/seguranca.php');
+include ('config/conn.php');
+
+
+$sql = "SELECT * FROM app_pizza";
+
+$query = mysql_query($sql);
+
+$nr_pizzas = mysql_num_rows($query);
+
+
+ ?>

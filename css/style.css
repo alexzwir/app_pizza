@@ -173,6 +173,18 @@ p a {
 	height: 346px;
 }
 
+#linha_opcao{
+	width: 555px;
+	height: 45px !important;
+}
+
+#opcao{
+	width:100px !important;
+	height:20px !important;
+	float:left;
+	display:inline;
+}
+
 #content div div.section span {
 	float: left;
 	height: auto;
@@ -196,7 +208,7 @@ p a {
 	background: url(../images/separator.gif) repeat-x center bottom;
 	color: #1f1b0c;
 	font-size: 36px;
-	line-height: 28px;
+	line-height: 36px;
 	margin: 0;
 	padding-bottom: 20px;
 	text-align: center;

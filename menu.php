@@ -118,11 +118,17 @@ $nr_pizzas = mysql_num_rows($query);
 
 					<?php 
 			 			
-			 			while($pizza = mysql_fetch_assoc($query))
+			 			while($nr_pizza =  mysql_fetch_assoc($query))
 			 			{
-			 				echo "<td>".$pizza['pizza_sabor']."<td>";
-			 				echo "<td>".$pizza['pizza_preco']."<td>";
-								
+			 				echo "<ul>";
+			 				echo "<li class='first'>";
+			 				echo "<table>";
+			 				echo "<tr>";
+			 				echo "<td>".$pizza['pizza_sabor']."</td><td>".$pizza['pizza_preco']."</td>";
+							echo "</tr>";
+							echo "</table>";
+							echo "</li>";
+							echo "</ul>";							
 			 			}
 
 			 		?>
@@ -132,7 +138,7 @@ $nr_pizzas = mysql_num_rows($query);
 						<li class="first">
 							<table>
 								<tr>
-									<td>Salami and Cheese</td>
+									<td>$pizza['pizza_sabor']</td>
 									<td><span>$24.50</span></td>
 								</tr>
 								<tr>

@@ -17,10 +17,10 @@ if (!$conect) die ("<h1>Falha na conexao com o Banco de Dados!</h1>
 $db = mysql_select_db("mydb");
 $charset = mysql_set_charset('utf8');
 if($db){
-	//echo "<h1>Conexao estabelecida!</h1>";
+	echo "<h1>Conexao estabelecida!</h1>";
 }
 else{
-	//echo "erro".mysql_error();
+	echo "erro".mysql_error();
 }
 
 
