@@ -1,0 +1,56 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#pai{
+	width: 70%;
+	margin:0 auto;
+}
+
+header{
+	width: 100%;
+	height: auto;
+	border: 1px solid black;
+}
+#logo{
+	width:100%;
+}
+
+img{
+	width: 100px;
+	height: 70px;
+	margin:5px;	
+ 	border: 1px solid black;
+ 	float:left;
+ }
+ p{
+ 	width: 100px;
+	height: 70px;
+	margin: 5px;
+ 	border:1px solid black;
+ 	float: right;
+ }
+ nav{
+ 	
+ 	margin: 5px; 
+ 	height: 35px;
+ 	border:1px solid black;
+ 	clear:both;
+ 	display:relative;
+ }
+
+ li{
+	list-style: none;
+ 	float:left;
+ 	height:auto;
+
+
+ }
+
+ul{
+	border:1px dashed black;
+	float:left;
+	padding: 5px;
+	margin: 5px;
+}
