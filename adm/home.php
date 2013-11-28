@@ -17,7 +17,8 @@
 
 	<ol>
 		<a href="pizzas.php"><li>Pizzas</li></a>
-		<li>Bebidas</li>
+		<a href="bebida.php"><li>Bebidas</li></a>
+		
 	</ol>
 </body>
 </html>

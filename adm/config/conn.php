@@ -6,7 +6,7 @@ setlocale(LC_ALL, 'pt_BR');
 
 
 //conexão com o servidor
-$conect = mysql_connect("localhost", "root","");
+$conect = mysql_connect("localhost", "root","root");
  
 // Caso a conexão seja reprovada, exibe na tela uma mensagem de erro
 if (!$conect) die ("<h1>Falha na conexao com o Banco de Dados!</h1>

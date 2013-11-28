@@ -33,6 +33,8 @@ include('config/conn.php');
 		<p>Escolha a sua pizza</p>
 
 			<form>
+
+				<input type="radio" name="" value="">Broto<br><input type="radio" name="" value="">Broto<br><input type="radio" name="" value="">Broto<br><input type="radio" name="" value="">Broto<br>
 			
 
 			<!--Tamanho da pizza -->

@@ -20,55 +20,21 @@ include('config/conn.php');
 <title></title>
 </head>
 <body>
-	<div id="pai">
+	
 
-		<header>
-			<div id="logo">
-				<img src="images/logo.gif">
-				<a href=""><p>Peça Agora</p></a>
-			</div>
-
-
-			<nav>
-				<li>
-					<ul>Home</ul>
-					<ul>Sobre nós</ul>
-					<ul>Cardápio</ul>
-					<ul>Cardápio</ul>
-					<ul>Entre em Contato</ul>
-				</li>
-			</nav>
-
-		</header>
-
-		<section>
-			<div>
-				<h1>As melhores pizzas pra você! Peça agora sua pizza, atraves do nosso Delivery!</h1>
-				<p id="cardapio">Confira o nosso cardápio</p>
-
-			</div>
-
-			<section>
-				<h2>Confira nossas promoções</h2>
-			</section>
-
-			<section>
-				<h3>Baixe nosso app e peça sua pizza aonde estiver!</h3>
-			</section>
 
 
 			<h1><?php echo "Pizzas: ".$nro_result_pizza; ?></h1>
 			
 			<!--Chamada das Pizzas -->
-			<div style="background-color:#FFF;">
-				<ul style="font-size:18px; color:#333; font-family: arial; list-style:none; margin:5px 0 5px 0; padding:0;">
+			<div>
+				<ul>
 				<?php 
 
 				while ($pizza = mysql_fetch_assoc($query_pizza)) {
-					echo "</b><br> ";
-					echo '<p style="font-weight:bold">'.$pizza['pizza_sabor']."</p><br><b>  Descrição:</b> ";
-					echo $pizza['pizza_desc']."<br><b>  Preço:</b> R$ ";
-					echo $pizza['pizza_preco']."<br><br><hr>";
+		
+					echo "<div> Sabor: ".$pizza['pizza_sabor']."<input type='checkbox' value='".$pizza['pizza_sabor']."' class='teste' ><br>".'<p>Descrição: '.$pizza['pizza_desc'].'<br> Preço:'.$pizza['pizza_preco'].'<br></div></br>';
+		
 					}
 				?>
 				</ul>
@@ -76,31 +42,43 @@ include('config/conn.php');
 
 
 			<!--Chamada dos Refrigerantes -->
-			<h1 style="color:#F60; font-family: arial;"><?php echo "Bebidas: ".$nro_result_bebidas; ?></h1>
-			<div style="background-color: #111;">
-				<ul style="font-size:18px; font-family: arial; list-style:none; margin:5px 0 5px 0; padding:0;">
+			<h1><?php echo "Bebidas: ".$nro_result_bebidas; ?></h1>
+			<div>
+				<ul>
 				<?php 
 
 				while ($bebida = mysql_fetch_assoc($query_bebidas)) {
-					echo "<br><b>  Marca:</b> ";
-					echo $bebida['bebida_marca']."<br><b>  Descrição:</b> ";
-					echo $bebida['bebida_desc']."<br><b>  Preço:</b> R$ ";
-					echo $bebida['bebida_preco']."<br><br><hr>";
+
+					echo '<div> Marca:'. $bebida['bebida_marca']. '<br> Descrição:'.$bebida['bebida_desc'].'<br> Preço:'.$bebida['bebida_preco']. '</div>';    
+					
 					}
 				?>
 
 				</ul>
 			</div>
-		</section>
+		
+			<script type="text/javascript">
 
-		<section>
-			<a href="pedido.php">Gostou? Faça seu pedido!!!</a>	
-			
+				function calculatotal(){ 
+					var valor = 0; 
+					$('.teste').each(function(i){ 
+					valor = parseInt($(this).val()) + valor;
+				}); 
+					document.getElementById("total").value = valor; 
 
-		</section>
 
-	</div>
+			</script>
 
+
+
+			<h3>TOTAL</h3>
+			<input type="text" name="total" id="total" onBlur="javascript:calculatotal();" size="15" />
+			<?php
+
+
+
+
+			?>
 
 </body>
 </html>
